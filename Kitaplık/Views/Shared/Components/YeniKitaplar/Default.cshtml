@@ -1,0 +1,17 @@
+@model IEnumerable<Kitaplık.Models.Kitaplar>
+
+<table class="table table-success table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Kitap Ad</th>
+        <th>Yazar</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+      <tr>
+          <td>@x.Id</td>
+          <td>@x.KitapAd</td>
+          <td>@x.Yazar</td>
+      </tr> 
+    }
+</table>

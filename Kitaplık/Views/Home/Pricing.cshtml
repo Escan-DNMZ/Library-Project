@@ -1,0 +1,26 @@
+@model List<Kitaplık.Models.Pricing>
+
+@{
+    ViewData["Title"] = "Pricing";
+   
+}
+
+<table class="table table-secondary table-striped">
+    
+    <tr>
+        <th>Id</th>
+        <th>Kitap Adı</th>
+        <th>Fiyat</th>
+    </tr>
+
+    @foreach (var p in Model)
+    { 
+    <tr>
+        <td>@p.Id</td>
+        <td>@p.KitapAd</td>
+        <td>@p.Price</td>
+    </tr>
+    }
+
+</table>
+

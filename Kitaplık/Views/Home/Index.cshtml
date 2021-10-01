@@ -1,0 +1,29 @@
+@model List<Kitaplık.Models.Kitaplar>
+
+@{
+    ViewData["Title"] = "Index";
+   
+}
+
+
+<table class="table table-primary table-striped">
+    
+    <tr>
+        <th>Id</th>
+        <th>Kitap Adı</th>
+        <th>Yazar</th>
+    </tr>
+
+    @foreach (var k in Model)
+    { 
+    <tr>
+        <td>@k.Id</td>
+        <td>@k.KitapAd</td>
+        <td>@k.Yazar</td>
+    </tr>
+    }
+
+</table>
+<br>
+<h2  class="fw-normal text-success">Gelecek Kitaplar</h2>
+@await Component.InvokeAsync("YeniKitaplar")
